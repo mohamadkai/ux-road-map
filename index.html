@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خارطة طريق تصميم UI/UX</title>
+    <title>خارطة طريق تصميم UI/UX الاحترافية</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; color: #333; }
@@ -35,17 +35,19 @@
         .topic-checkbox.completed::after { content: '✓'; font-size: 12px; }
         .resources-section { color: white; padding: 25px; border-radius: 15px; margin: 20px 0; }
         .resources-section h3 { margin-bottom: 15px; font-size: 1.3em; }
+        .resources-section h4 { font-size: 1.1em; opacity: 0.9; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; }
         .resources-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
         .resource-item { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; backdrop-filter: blur(5px); }
         .resource-title { font-weight: bold; margin-bottom: 5px; }
         .resource-author { font-size: 0.9em; opacity: 0.8; }
         .books-section { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
         .youtube-section { background: linear-gradient(135deg, #ff7675, #d63031); }
-        .practical-section { background: linear-gradient(135deg, #fd79a8, #fdcb6e); color: white; padding: 25px; border-radius: 15px; margin: 20px 0; }
-        .practical-section h3 { margin-bottom: 15px; font-size: 1.3em; }
+        .advanced-resources-section { background: linear-gradient(135deg, #0984e3, #2c3e50); }
+        .practical-section { background: linear-gradient(135deg, #fdcb6e, #55efc4); color: #333; padding: 25px; border-radius: 15px; margin: 20px 0; }
+        .practical-section h3 { margin-bottom: 15px; font-size: 1.3em; color: #2c3e50; }
         .practical-exercises { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .exercise-item { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s ease; }
-        .exercise-item:hover { background: rgba(255,255,255,0.3); transform: scale(1.05); }
+        .exercise-item { background: rgba(255,255,255,0.5); padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s ease; font-weight: 500;}
+        .exercise-item:hover { background: rgba(255,255,255,0.7); transform: scale(1.05); }
         .stats-dashboard { background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 30px; margin: 30px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .stat-card { text-align: center; padding: 20px; background: linear-gradient(135deg, #74b9ff, #0984e3); color: white; border-radius: 15px; }
@@ -81,13 +83,14 @@
         <!-- المستوى المبتدئ -->
         <div id="beginner" class="level-content active">
             <div class="modules-grid">
-                <div class="module-card">
+                 <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">🤔</div><h2 class="module-title">مدخل إلى عالم UI/UX</h2></div>
                     <ul class="topics-list">
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>ما هو الفرق بين UI و UX؟</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أهداف تجربة المستخدم (السهولة، الفعالية، الرغبة)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>مبادئ التصميم الأساسية (التباين، التكرار، المحاذاة، القرب)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>نظرية الألوان وعلم نفس الألوان</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساسيات الطباعة (Typography)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساسيات الطباعة (Typography) والهرمية النصية</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>مبادئ الجشطالت (Gestalt Principles)</span></li>
                     </ul>
                 </div>
@@ -95,9 +98,10 @@
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">🔬</div><h2 class="module-title">أساسيات بحث المستخدم (UX Research)</h2></div>
                     <ul class="topics-list">
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أهمية البحث في عملية التصميم</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>طرق جمع البيانات الأولية (مقابلات، استبيانات)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء شخصيات المستخدمين (User Personas)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>رسم خرائط رحلة المستخدم (User Journey Maps)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تحليل المنافسين</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تحليل المنافسين والميزات</span></li>
                     </ul>
                 </div>
                 <div class="module-card">
@@ -106,20 +110,31 @@
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>الشبكات وأنظمة التخطيط (Layout & Grids)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التسلسل الهرمي البصري (Visual Hierarchy)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تصميم المكونات الأساسية (أزرار، حقول إدخال، قوائم)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام الفراغ الأبيض بفعالية</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساسيات تصميم الأيقونات (Iconography)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام الفراغ الأبيض (Whitespace) بفعالية</span></li>
                     </ul>
                 </div>
                 <div class="module-card">
-                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">🛠️</div><h2 class="module-title">الأدوات الأساسية</h2></div>
+                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">🖋️</div><h2 class="module-title">أساسيات فيجما (Figma Basics)</h2></div>
                     <ul class="topics-list">
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تعلم أساسيات Figma (الأداة الأشهر)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>فهم ماهية Wireframing و Prototyping</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أدوات الإلهام (Behance, Dribbble, Pinterest)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام أدوات اختيار الألوان (Coolors, Adobe Color)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>جولة في واجهة فيجما والتعرف على الأدوات</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التعامل مع الإطارات (Frames) والأشكال الأساسية</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام أدوات النص والمحاذاة والـ Pen Tool</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء إطارات العمل (Wireframing)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إنشاء النماذج الأولية البسيطة (Simple Prototyping)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تطبيق عملي: تقليد واجهات تطبيقات مشهورة</span></li>
                     </ul>
                 </div>
             </div>
-
+            <div class="practical-section">
+                <h3>🎯 تطبيقات عملية للمبتدئين</h3>
+                <div class="practical-exercises">
+                    <div class="exercise-item">إعادة تصميم شاشة تسجيل دخول لتطبيق مشهور (مثل Instagram) في Figma</div>
+                    <div class="exercise-item">بناء Wireframe لـ 3 شاشات لتطبيق طقس بسيط</div>
+                    <div class="exercise-item">إنشاء لوحة ألوان وهرمية خطوط لمشروع وهمي</div>
+                    <div class="exercise-item">تجميع لوحة إلهام (Moodboard) لمشروعك الأول</div>
+                </div>
+            </div>
             <div class="books-section resources-section">
                 <h3>📖 كتب مقترحة</h3>
                 <div class="resources-list">
@@ -129,21 +144,16 @@
                 </div>
             </div>
             <div class="youtube-section resources-section">
-                <h3>📺 قنوات يوتيوب مقترحة</h3>
+                <h3>📺 قنوات يوتيوب مقترحة (المستوى المبتدئ)</h3>
+                <h4>شخصيات وقنوات للشرح المبسط والمفاهيم</h4>
                 <div class="resources-list">
-                    <div class="resource-item"><div class="resource-title">Mizko</div><div class="resource-author">دروس عملية في التصميم وتجربة المستخدم</div></div>
-                    <div class="resource-item"><div class="resource-title">Figma</div><div class="resource-author">القناة الرسمية لأداة فيجما</div></div>
-                    <div class="resource-item"><div class="resource-title">Jesse Showalter</div><div class="resource-author">تصميم وتطوير ويب بأسلوب ممتع</div></div>
+                    <div class="resource-item"><div class="resource-title">Femke</div><div class="resource-author">شروحات عن عملية التصميم والتفكير التصميمي</div></div>
+                    <div class="resource-item"><div class="resource-title">Jesse Showalter</div><div class="resource-author">تصميم وتطوير ويب بأسلوب ممتع ومبسط</div></div>
                 </div>
-            </div>
-
-            <div class="practical-section">
-                <h3>🎯 تطبيقات عملية</h3>
-                <div class="practical-exercises">
-                    <div class="exercise-item">إعادة تصميم شاشة تطبيق مشهور</div>
-                    <div class="exercise-item">إنشاء شخصية مستخدم لمشروع خيالي</div>
-                    <div class="exercise-item">رسم Wireframe لتطبيق بسيط بالورقة والقلم</div>
-                    <div class="exercise-item">تصميم لوحة ألوان لمشروعك</div>
+                <h4>قنوات للتطبيقات العملية والتحديات</h4>
+                 <div class="resources-list">
+                    <div class="resource-item"><div class="resource-title">Figma</div><div class="resource-author">القناة الرسمية، مليئة بالدروس المباشرة</div></div>
+                    <div class="resource-item"><div class="resource-title">DesignCourse</div><div class="resource-author">Gary Simon، تحديات ودروس UI عملية جداً</div></div>
                 </div>
             </div>
         </div>
@@ -154,29 +164,51 @@
                 <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #e17055, #d63031);">📈</div><h2 class="module-title">تجربة المستخدم المتقدمة (UX)</h2></div>
                     <ul class="topics-list">
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>رسم تدفق المستخدم (User Flows)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>رسم تدفق المستخدم (User Flows) وتدفق المهام (Task Flows)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>هيكلة المعلومات (Information Architecture)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساليب اختبارات قابلية الاستخدام (Usability Testing)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إنشاء النماذج الأولية التفاعلية (Interactive Prototyping)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساليب اختبارات قابلية الاستخدام (المشرف عليها وغير المشرف عليها)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>صياغة سيناريوهات الاختبار وتحليل النتائج</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أساسيات كتابة المحتوى للتجربة (UX Writing & Microcopy)</span></li>
                     </ul>
                 </div>
                 <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #fdcb6e, #e17055);">✨</div><h2 class="module-title">واجهة المستخدم المتقدمة (UI)</h2></div>
                     <ul class="topics-list">
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التفكير المنظومي (Systems Thinking) في التصميم</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء أنظمة التصميم (Design Systems)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التفاعلات الدقيقة (Microinteractions) والرسوم المتحركة</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تصميم إمكانية الوصول (Accessibility - WCAG)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التصميم للمنصات المختلفة (موبايل، ويب، تابلت)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التصميم المتجاوب للمنصات المختلفة (Responsive Design)</span></li>
                     </ul>
                 </div>
                 <div class="module-card">
-                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #00b894, #00a085);">🤝</div><h2 class="module-title">العملية والتسليم</h2></div>
+                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #00b894, #00a085);">⚙️</div><h2 class="module-title">إتقان فيجما (Figma Mastery)</h2></div>
+                    <ul class="topics-list">
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>مكونات وتصاميم متجاوبة (Components & Auto Layout)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء المتغيرات (Variants) للمكونات المعقدة</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إنشاء النماذج الأولية التفاعلية المتقدمة (Advanced Prototyping)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام الـ Style Libraries للتعاون بين الملفات</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استكشاف واستخدام الإضافات (Plugins) الفعالة</span></li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #ff7675, #d63031);">🤝</div><h2 class="module-title">العملية والتسليم</h2></div>
                     <ul class="topics-list">
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التصميم ضمن فرق العمل (Agile/Scrum)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تسليم التصاميم للمطورين (Design Handoff)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء دراسة حالة (Case Study) لمشروعك</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التعامل مع التغذية الراجعة (Feedback) من الفريق وأصحاب المصلحة</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء دراسة حالة (Case Study) قوية</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إنشاء وتطوير معرض الأعمال (Portfolio)</span></li>
                     </ul>
+                </div>
+            </div>
+            <div class="practical-section">
+                <h3>🎯 تطبيقات عملية للمستوى المتوسط</h3>
+                <div class="practical-exercises">
+                    <div class="exercise-item">تصميم تطبيق كامل (4-5 شاشات) مع نموذج أولي تفاعلي في Figma</div>
+                    <div class="exercise-item">إجراء اختبار قابلية استخدام بسيط مع صديق على نموذجك الأولي</div>
+                    <div class="exercise-item">إنشاء نظام تصميم مصغر (Mini Design System) لمشروعك</div>
+                    <div class="exercise-item">تصميم تفاعل دقيق (Microinteraction) لزر "إضافة إلى السلة"</div>
                 </div>
             </div>
             <div class="books-section resources-section">
@@ -184,66 +216,100 @@
                 <div class="resources-list">
                     <div class="resource-item"><div class="resource-title">Hooked: How to Build Habit-Forming Products</div><div class="resource-author">Nir Eyal</div></div>
                     <div class="resource-item"><div class="resource-title">Refactoring UI</div><div class="resource-author">Adam Wathan & Steve Schoger</div></div>
-                    <div class="resource-item"><div class="resource-title">About Face: The Essentials of Interaction Design</div><div class="resource-author">Alan Cooper</div></div>
+                    <div class="resource-item"><div class="resource-title">Microcopy: The Complete Guide</div><div class="resource-author">Kinneret Yifrah</div></div>
                 </div>
             </div>
-             <div class="youtube-section resources-section">
-                <h3>📺 قنوات يوتيوب مقترحة</h3>
+            <div class="youtube-section resources-section">
+                <h3>📺 قنوات يوتيوب مقترحة (المستوى المتوسط)</h3>
+                <h4>شخصيات وقنوات لشرح المفاهيم المتقدمة</h4>
                 <div class="resources-list">
-                    <div class="resource-item"><div class="resource-title">AJ&Smart</div><div class="resource-author">ورش عمل واستراتيجيات في UX</div></div>
-                    <div class="resource-item"><div class="resource-title">NNgroup (Nielsen Norman Group)</div><div class="resource-author">المرجع العلمي لأبحاث تجربة المستخدم</div></div>
+                    <div class="resource-item"><div class="resource-title">NNgroup</div><div class="resource-author">المرجع العلمي لأبحاث تجربة المستخدم</div></div>
+                    <div class="resource-item"><div class="resource-title">AJ&Smart</div><div class="resource-author">ورش عمل واستراتيجيات في UX ومنهجيات العمل</div></div>
                     <div class="resource-item"><div class="resource-title">The Futur</div><div class="resource-author">الجانب العملي والتجاري من التصميم</div></div>
                 </div>
-            </div>
-            <div class="practical-section">
-                <h3>🎯 تطبيقات عملية</h3>
-                <div class="practical-exercises">
-                    <div class="exercise-item">تصميم تطبيق كامل من الفكرة إلى النموذج الأولي</div>
-                    <div class="exercise-item">إجراء مقابلة مع مستخدم حقيقي وتسجيل النتائج</div>
-                    <div class="exercise-item">إنشاء نظام تصميم مصغر (Mini Design System)</div>
-                    <div class="exercise-item">كتابة أول دراسة حالة لمعرض أعمالك</div>
+                <h4>قنوات للتطبيقات العملية المعمقة</h4>
+                 <div class="resources-list">
+                    <div class="resource-item"><div class="resource-title">Mizko</div><div class="resource-author">مشاريع كاملة وأنظمة تصميم في Figma</div></div>
+                    <div class="resource-item"><div class="resource-title">Ridd</div><div class="resource-author">تقنيات متقدمة في تصميم الواجهات في Figma</div></div>
+                    <div class="resource-item"><div class="resource-title">Flux Academy</div><div class="resource-author">Ran Segall، يركز على عملية التصميم الكاملة</div></div>
                 </div>
             </div>
         </div>
 
         <!-- المستوى المحترف -->
         <div id="advanced" class="level-content">
-             <div class="modules-grid">
+            <div class="modules-grid">
                 <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">🧠</div><h2 class="module-title">استراتيجية المنتج والتصميم</h2></div>
                     <ul class="topics-list">
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التفكير بالمنتج (Product Thinking)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>ربط التصميم بأهداف العمل (Business Goals)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>كتابة تجربة المستخدم (UX Writing)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تحديد مقاييس نجاح التصميم (Design Metrics & KPIs)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء خارطة طريق المنتج (Product Roadmap) بالتعاون مع مدير المنتج</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>ربط التصميم بأهداف العمل ومؤشرات الأداء الرئيسية (OKRs & KPIs)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>حساب العائد على الاستثمار في التصميم (Design ROI)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استراتيجيات كتابة تجربة المستخدم المتقدمة</span></li>
                     </ul>
                 </div>
                  <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">🗣️</div><h2 class="module-title">القيادة والتعاون</h2></div>
                     <ul class="topics-list">
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>قيادة ورش عمل التصميم (Design Workshops)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إعطاء وتلقي النقد البناء (Design Critique)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>قيادة ورش عمل التصميم (Design Sprints, Brainstorming)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إدارة جلسات نقد التصميم (Design Critique)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>توجيه المصممين المبتدئين (Mentorship)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التعاون الفعال مع مديري المنتجات والمهندسين</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>بناء ثقافة التصميم داخل الشركة (Fostering Design Culture)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>مهارات التفاوض والعرض التقديمي لأصحاب المصلحة</span></li>
+                    </ul>
+                </div>
+                 <div class="module-card">
+                    <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #55efc4, #00b894);">🚀</div><h2 class="module-title">فيجما وأدوات متقدمة</h2></div>
+                    <ul class="topics-list">
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استخدام المتغيرات (Variables) للـ Prototyping والـ Theming</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>إدارة وتطوير أنظمة تصميم واسعة النطاق (Scaling Design Systems)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>العمل الجماعي: المكتبات، التفرع (Branching)، الدمج (Merging)</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>أتمتة المهام باستخدام الإضافات المتقدمة و FigJam</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>استكشاف أدوات (Framer, Rive) للتفاعلات المعقدة</span></li>
                     </ul>
                 </div>
                 <div class="module-card">
                     <div class="module-header"><div class="module-icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">🔬</div><h2 class="module-title">علم النفس والبيانات</h2></div>
                     <ul class="topics-list">
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>الانحيازات المعرفية في التصميم (Cognitive Biases)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التصميم الإقناعي والأخلاقيات</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>التصميم الإقناعي والأخلاقيات (Persuasive & Ethical Design)</span></li>
                         <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تحليل البيانات الكمية (Quantitative Data Analysis)</span></li>
-                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>فهم وتطبيق اختبارات A/B</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>تصميم وتطبيق اختبارات A/B</span></li>
+                        <li class="topic-item" onclick="toggleTopic(this)"><div class="topic-checkbox"></div><span>الجمع بين البيانات النوعية والكمية لاتخاذ القرارات</span></li>
                     </ul>
                 </div>
             </div>
             <div class="practical-section">
-                <h3>🎯 تطبيقات عملية</h3>
+                <h3>🎯 تطبيقات عملية للمستوى المحترف</h3>
                 <div class="practical-exercises">
-                    <div class="exercise-item">قيادة مشروع تصميم كامل لفريق صغير</div>
-                    <div class="exercise-item">تحسين تصميم قائم بناءً على بيانات حقيقية</div>
-                    <div class="exercise-item">بناء استراتيجية تصميم لمنتج جديد</div>
-                    <div class="exercise-item">تقديم عرض تقديمي احترافي لمشروعك</div>
+                    <div class="exercise-item">كتابة وثيقة استراتيجية تصميم لمنتج جديد</div>
+                    <div class="exercise-item">إعداد وقيادة جلسة نقد تصميم (Critique Session) مصغرة</div>
+                    <div class="exercise-item">استخدام Variables لعمل Dark/Light Mode في Figma</div>
+                    <div class="exercise-item">اقتراح تحسين لواجهة موجودة بناءً على تحليل بيانات افتراضي</div>
+                </div>
+            </div>
+            <div class="advanced-resources-section resources-section">
+                <h3>📚 مصادر مقترحة للقيادة والاستراتيجية</h3>
+                <div class="resources-list">
+                    <div class="resource-item"><div class="resource-title">Inspired</div><div class="resource-author">Marty Cagan (عن بناء منتجات يحبها العملاء)</div></div>
+                    <div class="resource-item"><div class="resource-title">Articulating Design Decisions</div><div class="resource-author">Tom Greever (عن كيفية شرح قراراتك التصميمية)</div></div>
+                    <div class="resource-item"><div class="resource-title">The Making of a Manager</div><div class="resource-author">Julie Zhuo (عن التحول إلى دور قيادي)</div></div>
+                </div>
+            </div>
+             <div class="youtube-section resources-section">
+                <h3>📺 قنوات يوتيوب مقترحة (المستوى المحترف)</h3>
+                <h4>قنوات للاستراتيجية والقيادة</h4>
+                <div class="resources-list">
+                    <div class="resource-item"><div class="resource-title">Lenny's Podcast</div><div class="resource-author">مقابلات مع قادة المنتجات والنمو في أكبر الشركات</div></div>
+                    <div class="resource-item"><div class="resource-title">Julie Zhuo</div><div class="resource-author">نصائح في القيادة والإدارة من مديرة تصميم سابقة بفيسبوك</div></div>
+                     <div class="resource-item"><div class="resource-title">Design Details</div><div class="resource-author">بودكاست يناقش تفاصيل التصميم مع مصممين من شركات تقنية كبرى</div></div>
+                </div>
+                <h4>قنوات للتطبيقات المتقدمة جداً</h4>
+                 <div class="resources-list">
+                    <div class="resource-item"><div class="resource-title">Framer</div><div class="resource-author">القناة الرسمية لأداة بناء المواقع والنماذج التفاعلية المتقدمة</div></div>
+                    <div class="resource-item"><div class="resource-title">Rive</div><div class="resource-author">القناة الرسمية لأداة عمل الرسوم المتحركة التفاعلية المعقدة</div></div>
+                    <div class="resource-item"><div class="resource-title">Figma (Advanced)</div><div class="resource-author">تابع فيديوهاتهم عن Variables, Branching & Merging</div></div>
                 </div>
             </div>
         </div>
@@ -265,25 +331,138 @@
     </div>
     <script>
         let progress = {
-            beginner: { completed: 0, total: 17 },
-            intermediate: { completed: 0, total: 12 },
-            advanced: { completed: 0, total: 11 },
+            beginner: { completed: 0, total: 25 },
+            intermediate: { completed: 0, total: 20 },
+            advanced: { completed: 0, total: 20 },
             startDate: null
         };
         const egyptianMessages = ["عاش يا فنان، تصميمك جاي في السكة!", "كل بيكسل بتعمله بيقربك من هدفك. كمل!", "شغل عالي.. إنت قدها والله!", "ما يوقفكش حاجة.. مستقبلك مستنيك.", "إيه الجمال ده! فخور بيك.", "استمر يا بطل، الطريق طويل بس ممتع. 🚀"];
-        // --- Core Progress Tracking & Motivation Logic ---
-        function loadProgress() { const saved = localStorage.getItem('uiuxProgress'); if (saved) { progress = JSON.parse(saved); document.querySelectorAll('.topic-item').forEach((item, index) => { const levelId = item.closest('.level-content').id; const topicId = `${levelId}-${index}`; if (progress[topicId] === true) { item.querySelector('.topic-checkbox').classList.add('completed'); } }); } updateAllProgress(); updateStats(); }
-        function saveProgress() { localStorage.setItem('uiuxProgress', JSON.stringify(progress)); }
-        function showLevel(level) { document.querySelectorAll('.level-content').forEach(content => content.classList.remove('active')); document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active')); document.getElementById(level).classList.add('active'); event.currentTarget.classList.add('active'); }
-        function toggleTopic(element) { const checkbox = element.querySelector('.topic-checkbox'); const isCompleted = checkbox.classList.contains('completed'); const levelId = element.closest('.level-content').id; if (!progress.startDate) { progress.startDate = new Date().toISOString(); } const topicIndex = Array.from(element.parentElement.children).indexOf(element); const topicId = `${levelId}-${topicIndex}`; if (isCompleted) { checkbox.classList.remove('completed'); progress[levelId].completed--; progress[topicId] = false; } else { checkbox.classList.add('completed'); progress[levelId].completed++; progress[topicId] = true; element.style.animation = 'none'; void element.offsetWidth; element.style.animation = 'fadeIn 0.5s ease-in'; } progress[levelId].completed = Math.max(0, progress[levelId].completed); saveProgress(); updateAllProgress(); updateStats(); }
-        function updateAllProgress() { ['beginner', 'intermediate', 'advanced'].forEach(level => { if(progress[level].total > 0){ const percentage = Math.round((progress[level].completed / progress[level].total) * 100); const progressBar = document.getElementById(`${level}-progress`); const percentageSpan = document.getElementById(`${level}-percentage`); if (progressBar && percentageSpan) { progressBar.style.width = percentage + '%'; percentageSpan.textContent = percentage + '%'; } } }); }
-        function updateStats() { const totalCompleted = progress.beginner.completed + progress.intermediate.completed + progress.advanced.completed; const totalTopics = progress.beginner.total + progress.intermediate.total + progress.advanced.total; document.getElementById('total-topics').textContent = totalCompleted; document.getElementById('completion-rate').textContent = totalTopics > 0 ? Math.round((totalCompleted / totalTopics) * 100) + '%' : '0%'; if (progress.startDate) { const startDate = new Date(progress.startDate); const today = new Date(); const diffTime = Math.abs(today - startDate); const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); document.getElementById('study-days').textContent = diffDays; } else { document.getElementById('study-days').textContent = 0; } let currentLevel = 'مبتدئ'; if (progress.advanced.completed > 0 || progress.intermediate.completed === progress.intermediate.total) { currentLevel = 'محترف'; } else if (progress.intermediate.completed > 0 || progress.beginner.completed === progress.beginner.total) { currentLevel = 'متوسط'; } document.getElementById('current-level').textContent = currentLevel; }
-        function resetProgress() { if (confirm('هل أنت متأكد من إعادة تعيين جميع البيانات؟ سيتم فقدان كل التقدم المحرز.')) { localStorage.removeItem('uiuxProgress'); window.location.reload(); } }
-        const motivationPopup = document.getElementById('motivation-popup'); const motivationText = document.getElementById('motivation-text');
-        function showMotivationPopup() { const randomMessage = egyptianMessages[Math.floor(Math.random() * egyptianMessages.length)]; motivationText.textContent = randomMessage; motivationPopup.classList.add('show'); setTimeout(() => { hideMotivationPopup(); }, 8000); }
-        function hideMotivationPopup() { motivationPopup.classList.remove('show'); }
-        setInterval(showMotivationPopup, 60000); // Popup every 1 minute
-        document.addEventListener('DOMContentLoaded', loadProgress);
+        
+        function loadProgress() { 
+            const saved = localStorage.getItem('uiuxProgress'); 
+            if (saved) { 
+                progress = JSON.parse(saved); 
+                progress.beginner.total = 25;
+                progress.intermediate.total = 20;
+                progress.advanced.total = 20;
+                
+                document.querySelectorAll('.topic-item').forEach((item) => { 
+                    const levelId = item.closest('.level-content').id; 
+                    const topicUniqueId = `${levelId}-${item.querySelector('span').textContent.trim()}`;
+                    if (progress[topicUniqueId] === true) { 
+                        item.querySelector('.topic-checkbox').classList.add('completed'); 
+                    } 
+                }); 
+            } 
+            updateAllProgress(); 
+            updateStats(); 
+        }
+
+        function saveProgress() { 
+            localStorage.setItem('uiuxProgress', JSON.stringify(progress)); 
+        }
+        
+        function showLevel(level) { 
+            document.querySelectorAll('.level-content').forEach(content => content.classList.remove('active')); 
+            document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active')); 
+            document.getElementById(level).classList.add('active'); 
+            event.currentTarget.classList.add('active'); 
+        }
+        
+        function toggleTopic(element) { 
+            const checkbox = element.querySelector('.topic-checkbox'); 
+            const isCompleted = checkbox.classList.contains('completed'); 
+            const levelId = element.closest('.level-content').id; 
+            if (!progress.startDate) { 
+                progress.startDate = new Date().toISOString(); 
+            } 
+            const topicUniqueId = `${levelId}-${element.querySelector('span').textContent.trim()}`;
+            
+            if (isCompleted) { 
+                checkbox.classList.remove('completed'); 
+                progress[topicUniqueId] = false; 
+            } else { 
+                checkbox.classList.add('completed'); 
+                progress[topicUniqueId] = true; 
+                element.style.animation = 'none'; 
+                void element.offsetWidth; 
+                element.style.animation = 'fadeIn 0.5s ease-in'; 
+            } 
+            updateAllProgress(); 
+            updateStats(); 
+        }
+        
+        function updateAllProgress() { 
+            ['beginner', 'intermediate', 'advanced'].forEach(level => { 
+                if(progress[level] && progress[level].total > 0){ 
+                    let currentCompleted = 0;
+                    document.querySelectorAll(`#${level} .topic-checkbox.completed`).forEach(() => currentCompleted++);
+                    progress[level].completed = currentCompleted;
+
+                    const percentage = Math.round((currentCompleted / progress[level].total) * 100); 
+                    const progressBar = document.getElementById(`${level}-progress`); 
+                    const percentageSpan = document.getElementById(`${level}-percentage`); 
+                    if (progressBar && percentageSpan) { 
+                        progressBar.style.width = percentage + '%'; 
+                        percentageSpan.textContent = percentage + '%'; 
+                    } 
+                } 
+            });
+            saveProgress(); 
+        }
+        
+        function updateStats() { 
+            const totalCompleted = (progress.beginner.completed || 0) + (progress.intermediate.completed || 0) + (progress.advanced.completed || 0); 
+            const totalTopics = progress.beginner.total + progress.intermediate.total + progress.advanced.total; 
+            document.getElementById('total-topics').textContent = totalCompleted; 
+            document.getElementById('completion-rate').textContent = totalTopics > 0 ? Math.round((totalCompleted / totalTopics) * 100) + '%' : '0%'; 
+            if (progress.startDate) { 
+                const startDate = new Date(progress.startDate); 
+                const today = new Date(); 
+                const diffTime = Math.abs(today - startDate); 
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+                document.getElementById('study-days').textContent = diffDays > 0 ? diffDays : 1; 
+            } else { 
+                document.getElementById('study-days').textContent = 0; 
+            } 
+            let currentLevel = 'مبتدئ'; 
+            if (progress.advanced.completed > 0 || (progress.intermediate.total > 0 && progress.intermediate.completed === progress.intermediate.total)) { 
+                currentLevel = 'محترف'; 
+            } else if (progress.intermediate.completed > 0 || (progress.beginner.total > 0 && progress.beginner.completed === progress.beginner.total)) { 
+                currentLevel = 'متوسط'; 
+            } 
+            document.getElementById('current-level').textContent = currentLevel; 
+        }
+        
+        function resetProgress() { 
+            if (confirm('هل أنت متأكد من إعادة تعيين جميع البيانات؟ سيتم فقدان كل التقدم المحرز.')) { 
+                localStorage.removeItem('uiuxProgress'); 
+                window.location.reload(); 
+            } 
+        }
+        
+        const motivationPopup = document.getElementById('motivation-popup'); 
+        const motivationText = document.getElementById('motivation-text');
+        let motivationInterval;
+        function showMotivationPopup() { 
+            const randomMessage = egyptianMessages[Math.floor(Math.random() * egyptianMessages.length)]; 
+            motivationText.textContent = randomMessage; 
+            motivationPopup.classList.add('show'); 
+            setTimeout(() => { 
+                hideMotivationPopup(); 
+            }, 8000); 
+        }
+        function hideMotivationPopup() { 
+            motivationPopup.classList.remove('show'); 
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            setTimeout(() => {
+                showMotivationPopup();
+                motivationInterval = setInterval(showMotivationPopup, 120000);
+            }, 60000);
+        });
     </script>
 </body>
 </html>
